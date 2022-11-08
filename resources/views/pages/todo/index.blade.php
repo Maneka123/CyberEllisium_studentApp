@@ -60,6 +60,7 @@
       </td>
       <td>
         <a href="{{route('todo.delete',$task->id)}}">Delete</a>
+        <a href="{{route('todo.done',$task->id)}}">Update</a>
       </td>
     </tr>
    @endforeach

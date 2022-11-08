@@ -35,4 +35,14 @@ public function delete($task_id){
     return redirect()->back();
 
 }
+
+public function done($task_id){
+
+    $task=$this->task->find($task_id);
+    $task->done =1;
+    $task->update();
+    return redirect()->back();
+
+}
+
 }
