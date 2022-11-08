@@ -27,6 +27,51 @@
 
 
 </div>
+
+<div class="col-lg-12">
+
+<br><br>
+<table class="table table-dark table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Age</th>
+      <th scope="col">Image</th>
+      <th scope="col">Status</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+   @foreach($tasks as $key=> $task)
+    <tr>
+      
+      <td>{{++$key}}</td>
+      <td>{{$task->name}}</td>
+      <td>{{$task->age}}</td>
+      <td>{{$task->image}}</td>
+      <td>
+
+      @if($task->done==0)
+      <span class="badge bg-warning">Not completed</span>
+      @else
+      <span class="badge bg-success">Completed</span>
+      @endif
+      </td>
+      
+    </tr>
+   @endforeach
+  </tbody>
+</table>
+
+
+
+
+
+
+</div>
+
+
 </div>
 
 
