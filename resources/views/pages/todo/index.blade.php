@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container">
+<div  class="container">
 <div class="row">
 <div class="col-lg-12 text-center">
 <h1 class="page-title">My Student List</h1>
@@ -16,9 +16,9 @@
 <div class="form-group">
 
 <input class="form-control" name="fullname" type="text" placeholder="Name" aria-label="default input example">
-<input class="form-control" name="image" type="text" placeholder="image" aria-label="default input example">
+<input class="form-control" name="image" type="file" placeholder="image" aria-label="default input example">
 <input class="form-control" name="age" type="text" placeholder="Age" aria-label="default input example">
-<input class="form-control" name="done" type="text" placeholder="Age" aria-label="default input example">
+
 
 
 </div>
@@ -47,15 +47,15 @@
     <tr>
       
       <td>{{++$key}}</td>
-      <td>{{$task->name}}</td>
+      <td>{{$task->fullname}}</td>
       <td>{{$task->age}}</td>
       <td>{{$task->image}}</td>
       <td>
 
       @if($task->done==0)
-      <span class="badge bg-warning">Not completed</span>
+      <span class="badge bg-warning">Inactive</span>
       @else
-      <span class="badge bg-success">Completed</span>
+      <span class="badge bg-success">Active</span>
       @endif
       </td>
       <td>
