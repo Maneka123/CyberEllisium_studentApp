@@ -36,6 +36,7 @@
           <x-jet-dropdown-link href="{{ route('logout') }}" onclick="event.preventDefault(); this.closest('form').submit();">
               {{ __('Logout') }}
           </x-jet-dropdown-link>
+          <h1>{{Auth::user()->name}}</h1>
         </form>
       @else
       <span><a href="{{ route('login') }}">Login</a></span> || <span><a href="{{ route('register') }}">Register</a></span>
